@@ -55,7 +55,7 @@ blockquote, q {
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
+	content: "";
 	content: none;
 }
 table {
@@ -77,12 +77,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font: 400 16px/22px 'Vollkorn', serif;
+  font: 400 16px/22px "Vollkorn", serif;
 }
 
 h1, h2, h3, h4 {
   color: #242424;
-  font family: 'Oswald', sans-serif;
+  font family: "Oswald", sans-serif;
 }
 
 h1 {
