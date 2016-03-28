@@ -3,7 +3,11 @@
 ============================================
 
 	1.0 reset
-	2.0 custom styles
+	2.0 base
+  3.0 headings
+  4.0 navigation
+  5.0 content
+  6.0 footer
 
 
 ============================================
@@ -11,7 +15,7 @@
 ============================================ */
 
 /* =========================================
-1.0 Reset
+1.0 #reset
 ============================================ */
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -64,35 +68,51 @@ table {
 }
 
 /* =========================================
-2.0 custom styles
+2.0 #base
 ============================================ */
 
-* {
-  box-sizing: border-box; }
+html {
+	font-size: 62.5%;
+}
 
 body {
   background: #dedede;
   color: #373b3e;
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font: 400 16px/22px "Vollkorn", serif;
+  font-family: "Vollkorn", serif;
+  font-size: 1.6em;
+	line-height: 1.2;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: -webkit-flex; /* Safari */
+  display:         flex;
+  align-items: center;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* =========================================
+3.0 #headings
+============================================ */
 
 h1, h2, h3, h4 {
   color: #242424;
-  font family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 h1 {
-  font-size: 36px;
+  font-size:  3.6em;
   font-weight: 700;
-  padding-top: 10px;
 }
 
 h2 {
-  font-size: 21;
+  font-size:  1.6em;
   font-weight: 400;
 }
 
@@ -100,11 +120,58 @@ a {
   text-decoration: none;
 }
 
-.hero-text {
+a:link {color: #316871;}
+a:visited {color: #316871;}
+a:hover, a:focus {color: #242424;}
+a:active {color: #373b3e;}
+
+/* =========================================
+4.0 #navigation
+============================================ */
+
+.primary-nav {
+  display: -webkit-flex; /* Safari */
+  display:         flex;
   align-items: center;
-  padding-top: 20px;
+  justify-content: space-between;
+  font-family: "Vollkorn";
+  font-weight: 700;
+  padding: 10px;
+  width: 100%;
 }
 
-.about-me {
-  padding-top: 20px;
+.primary-nav-menu {
+  display: -webkit-flex; /* Safari */
+  display:         flex;
+  align-items: center;
+  flex: 1 1 0;
+  justify-content: space-around;
+  font-size: 1.5em;
 }
+
+.primary-nav-menu li {
+  padding: 0 20px;
+}
+
+.logo {
+  color: #316871;
+	flex: 2 1 auto;
+  font-size: 3.375em;
+}
+
+/* =========================================
+5.0 #content
+============================================ */
+
+.about-me {
+	width: 80%;
+}
+
+.social-icons {
+  padding-top: 1.2rem;
+  /*TODO: Figure out some cohesive social icon display/interactions */
+}
+
+/* =========================================
+6.0 #footer
+============================================ */
