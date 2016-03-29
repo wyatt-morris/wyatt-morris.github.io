@@ -83,7 +83,9 @@ body {
 	line-height: 1.2;
 }
 
-* {
+*,
+*:after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -122,8 +124,8 @@ a {
 
 a:link {color: #316871;}
 a:visited {color: #316871;}
-a:hover, a:focus {color: #242424;}
-a:active {color: #373b3e;}
+a:hover {color: #242424;}
+a:focus, a:active {color: #373b3e;}
 
 /* =========================================
 4.0 #navigation
@@ -147,10 +149,41 @@ a:active {color: #373b3e;}
   flex: 1 1 0;
   justify-content: space-around;
   font-size: 1.5em;
+  text-transform: uppercase;
 }
 
-.primary-nav-menu li {
+.primary-nav-menu a {
   padding: 0 20px;
+  position: relative;
+  letter-spacing: inherit;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+.primary-nav-menu a:before {
+  background-color: #242424;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+          transition: all 0.3s ease-in-out 0s;
+}
+
+.primary-nav-menu a:hover {
+	letter-spacing: 0.0625em;
+	position: relative;
+}
+
+.primary-nav-menu a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .logo {
