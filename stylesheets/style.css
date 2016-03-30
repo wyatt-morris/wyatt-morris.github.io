@@ -170,9 +170,8 @@ a:focus, a:active {color: #373b3e;}
   background-color: #242424;
   bottom: 0;
   content: "";
-  height: 0.01875em;
+  height: .1375em;
   left: 0;
-  letter-spacing: 0.0625em;
   position: absolute;
   width: 100%;
   visibility: hidden;
