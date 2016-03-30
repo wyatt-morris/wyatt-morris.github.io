@@ -170,7 +170,7 @@ a:focus, a:active {color: #373b3e;}
   background-color: #242424;
   bottom: 0;
   content: "";
-  height: 2px;
+  height: 0.01875em;
   left: 0;
   letter-spacing: 0.0625em;
   position: absolute;
@@ -178,12 +178,8 @@ a:focus, a:active {color: #373b3e;}
   visibility: hidden;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-          transition: all 0.3s ease-in-out 0s;
-}
-
-.primary-nav-menu a:hover {
-  letter-spacing: 0.0625em;
+  -webkit-transition: all 0.35s ease-in-out 0s;
+          transition: all 0.35s ease-in-out 0s;
 }
 
 .primary-nav-menu a:hover:before {
