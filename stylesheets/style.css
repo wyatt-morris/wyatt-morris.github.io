@@ -141,32 +141,30 @@ a:focus, a:active {color: #373b3e;}
 5.0 #header
 ============================================ */
 
-.primary-nav {
-  font-family: "Vollkorn";
-  font-weight: 700;
+.mobile-nav {
   padding: 10px 10px;
   text-transform: uppercase;
 }
 
-.primary-nav-menu {
+.mobile-nav__menu {
   -webkit-flex-direction: row;
           flex-direction: row;
   -webkit-flex-wrap: nowrap;
           flex-wrap: nowrap;
   -webkit-justify-content: space-between;
           justify-content: space-between;
-  font-size: 1.5em;
+  font-size: 1.6em;
   padding: 0;
 }
 
-.primary-nav-menu a {
+.mobile-nav__menu a {
   padding: 0 10px;
   position: relative;
   -webkit-transition: 0.3s;
           transition: 0.3s;
 }
 
-.primary-nav-menu a:before {
+.mobile-nav__menu a:before {
   background-color: #242424;
   bottom: 0;
   content: "";
@@ -181,7 +179,7 @@ a:focus, a:active {color: #373b3e;}
           transition: all 0.35s ease-in-out 0s;
 }
 
-.primary-nav-menu a:hover:before {
+.mobile-nav__menu a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
@@ -189,22 +187,23 @@ a:focus, a:active {color: #373b3e;}
 
 .logo {
   color: #316871;
-  -webkit-flex: 2 1 auto;
-          flex: 2 1 auto;
-  font-size: 2.4em;
+  /*-webkit-flex: 2 1 auto;
+          flex: 2 1 auto;*/
+  font-size: 3.375em;
 }
-.hero-text {
+
+.hero {
   padding: 1em;
 }
 /* =========================================
 6.0 #content
 ============================================ */
 
-.about-me {
+.about {
   width: 80%;
 }
 
-.social-icons {
+.social {
   padding-top: 1.2rem;
   /*TODO: Fancy icons */
 }
@@ -222,7 +221,7 @@ a:focus, a:active {color: #373b3e;}
 
 /*@media sceen and (min-width: 500px) {
 
-.primary-nav {
+.mobile-nav {
   -webkit-flex-direction: row;
             flex-direction: row;
   -webkit-justify-content: space-between;
