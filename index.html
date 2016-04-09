@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Wyatt Morris | Front End Developer</title>
-  <!-- <link href="stylesheets/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Vollkorn|Oswald:400,700" rel="stylesheet" type="text/css"> -->
   <meta name="description" content="Wyatt Morris is web developer in Washington, D.C., specializing in HTML5, CSS3, and JavaScript">
   <meta name="author" content="Wyatt Morris">
   <meta name="viewport" content="width=device-width,
-initial-scale=1">
+  initial-scale=1">
   <style media="screen">
   body {
     background: #f8f8f8;
@@ -16,37 +14,121 @@ initial-scale=1">
   </style>
   <link rel="icon" type="image/ico" href="http://wyatt-morris.com/favicon.ico">
 </head>
+
 <body class="flex-container">
 
-<nav class="flex-container mobile-nav">
-  <p class="logo">
-    WM
-  </p>
-  <div class="flex-container mobile-nav__menu">
-    <a href="#">What</a>
-    <a href="#">Who</a>
-    <a href="#">Talk</a>
+  <nav class="flex-container primary-nav">
+    <a href="#home" class="primary-nav__logo">
+      <span>WM</span>
+      <span>Wyatt Morris</span>
+    </a>
+    <ul class="flex-container primary-nav__menu">
+      <li><a class="active" href="#what">
+        <span>What</span>
+        <span>What I Do</span>
+      </a></li>
+      <li><a href="#who">
+        <span>Who</span>
+        <span>Who I Am</span>
+      </a></li>
+      <li><a href="#talk">
+        <span>Talk</span>
+        <span>Talk To Me</span>
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="main" role="main">
+
+    <div class="hero flex-container" id="home">
+      <div class="hero__text">
+        <h2>Builder by Trade</h2>
+        <h1>Developer by Choice</h1>
+      </div>
+    </div>
+
+    <section id="what">
+      <h2>What I Do</h2>
+      <div class="project flex-container">
+        <article class="project__container">
+          <figure>
+            <img class="project__img" src="assets/images/workshop_300.png" alt="Project Placeholder Image" />
+          </figure>
+          <div class="project__text">
+            <h3 class="project__text--title">Coming Soon</h3>
+            <p class="project__text--skills"> Skills — stuff • things</p>
+          </div>
+        </article>
+
+        <article class="project__container">
+          <figure>
+            <img class="project__img " src="assets/images/workshop_300.png" alt="Project Placeholder Image" />
+          </figure>
+          <div class="project__text">
+            <h3 class="project__text--title">Coming Soon</h3>
+            <p class="project__text--skills"> Skills — stuff • things</p>
+          </div>
+        </article>
+
+        <article class="project__container">
+          <figure>
+            <img class="project__img " src="assets/images/workshop_300.png" alt="Project Placeholder Image" />
+          </figure>
+          <div class="project__text">
+            <h3 class="project__text--title">Coming Soon</h3>
+            <p class="project__text--skills"> Skills — stuff • things</p>
+          </div>
+        </article>
+
+        <article class="project__container">
+          <figure>
+            <img class="project__img " src="assets/images/workshop_300.png" alt="Project Placeholder Image" />
+          </figure>
+          <div class="project__text">
+            <h3 class="project__text--title">Coming Soon</h3>
+            <p class="project__text--skills"> Skills — stuff • things</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="who">
+      <h2>Who I Am</h2>
+      <div class="about flex-container">
+        <div class="about__headline">
+          <h3>Wyatt Morris is a developer living in Washington, D.C.</h3>
+        </div>
+      <div class="about__overview">
+        <p>I'm a Front End Developer on the hunt for my first big break. I've been a carpenter, welder, student, and a civil engineer.</p>
+        <p>I also happen to be a huge baseball fan, an inconsistent soccer aficionado, and an avid collector of chrome bookmarks.</p>
+      </div>
+    </div>
+    <div class="about flex-container">
+      <div class="about__headline">
+        <h3>I've learned some things…</h3>
+      </div>
+      <div id="skills-donut"></div>
+    </div>
+
+    </section>
+
+    <section id="talk">
+      <h2>Talk to Me</h2>
+      <div class="about">
+        <a class="linkedin" href="https://www.linkedin.com/in/wyatt-morris-98388242"><img src="assets/images/In-Black-34px-R.png" alt="LinkedIn Icon" height="32"/></a>
+        <a class="github" href="https://github.com/wyatt-morris"><img src="assets/images/GitHub-Mark-32px.png" alt="Github Mark Icon" /></a>
+      </div>
+
+    </section>
+
   </div>
-</nav>
 
-<section class="hero">
-  <h2>Builder by Trade</h2>
-  <h1>Developer by Choice</h1>
-</section>
-
-<section class="about flex-container">
-  <p>
-    A placeholder while I rearrange the furniture. Meanwhile, feel free to visit me in these random places:
-  </p>
-  <div class="social">
-        <a class="linkedin" href="https://www.linkedin.com/in/wyatt-morris-98388242"><img src="images/In-Black-34px-R.png" alt="LinkedIn Icon" height="32"/></a>
-        <a class="github" href="https://github.com/wyatt-morris"><img src="images/GitHub-Mark-32px.png" alt="Github Mark Icon" /></a>
-  </div>
-
-</section>
-
-<link href="stylesheets/style.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Vollkorn|Oswald:400,700" rel="stylesheet" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn|Oswald:400,700" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script async src="assets/script/script.js"></script>
 </body>
 </html>
