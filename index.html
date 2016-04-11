@@ -15,7 +15,7 @@
   <link rel="icon" type="image/ico" href="http://wyatt-morris.com/favicon.ico">
 </head>
 
-<body class="flex-container">
+<body class="flex-container" id="#home">
 
   <nav class="flex-container primary-nav">
     <a href="#home" class="primary-nav__logo">
@@ -52,7 +52,13 @@
       <div class="project flex-container">
         <article class="project__container">
           <figure>
-            <img class="project__img" src="assets/images/workshop_300.png" alt="Project Placeholder Image" />
+            <img class="project__img"
+              src="assets/images/workshop_320.png"
+              srcset="assets/images/workshop_1280.png 1280w,
+                      assets/images/workshop_640.png 640w,
+                      assets/images/workshop_320.png 320w"
+              sizes="(min-width: 42em) 55vw, 80vw"
+              alt="Placeholder Image" />
           </figure>
           <div class="project__text">
             <h3 class="project__text--title">Coming Soon</h3>
@@ -62,7 +68,13 @@
 
         <article class="project__container">
           <figure>
-            <img class="project__img " src="assets/images/workshop_300.png" alt="Project Placeholder Image" />
+            <img class="project__img"
+              src="assets/images/workshop_320.png"
+              srcset="assets/images/workshop_1280.png 1280w,
+                      assets/images/workshop_640.png 640w,
+                      assets/images/workshop_320.png 320w"
+              sizes="(min-width: 42em) 55vw, 80vw"
+              alt="Placeholder Image" />
           </figure>
           <div class="project__text">
             <h3 class="project__text--title">Coming Soon</h3>
@@ -72,7 +84,13 @@
 
         <article class="project__container">
           <figure>
-            <img class="project__img " src="assets/images/workshop_300.png" alt="Project Placeholder Image" />
+            <img class="project__img"
+              src="assets/images/workshop_320.png"
+              srcset="assets/images/workshop_1280.png 1280w,
+                      assets/images/workshop_640.png 640w,
+                      assets/images/workshop_320.png 320w"
+              sizes="(min-width: 42em) 55vw, 80vw"
+              alt="Placeholder Image" />
           </figure>
           <div class="project__text">
             <h3 class="project__text--title">Coming Soon</h3>
@@ -82,7 +100,13 @@
 
         <article class="project__container">
           <figure>
-            <img class="project__img " src="assets/images/workshop_300.png" alt="Project Placeholder Image" />
+            <img class="project__img"
+              src="assets/images/workshop_320.png"
+              srcset="assets/images/workshop_1280.png 1280w,
+                      assets/images/workshop_640.png 640w,
+                      assets/images/workshop_320.png 320w"
+              sizes="(min-width: 42em) 55vw, 80vw"
+              alt="Placeholder Image" />
           </figure>
           <div class="project__text">
             <h3 class="project__text--title">Coming Soon</h3>
@@ -98,37 +122,50 @@
         <div class="about__headline">
           <h3>Wyatt Morris is a developer living in Washington, D.C.</h3>
         </div>
-      <div class="about__overview">
-        <p>I'm a Front End Developer on the hunt for my first big break. I've been a carpenter, welder, student, and a civil engineer.</p>
-        <p>I also happen to be a huge baseball fan, an inconsistent soccer aficionado, and an avid collector of chrome bookmarks.</p>
-      </div>
+        <div class="about__overview">
+          <p>I'm on the hunt for my first big break in web development. I've never been one to shy away from a challenge, so don't hesitate to <a href="mailto:wyatt@wyatt-morris.com">contact</a> me to see how we might work together.</p>
+          <p>I've been a carpenter, welder, student, and a civil engineer. I also happen to be a huge baseball fan, an inconsistent soccer aficionado, and an avid collector of chrome bookmarks.</p>
+        </div>
     </div>
+
     <div class="about flex-container">
       <div class="about__headline">
         <h3>I've learned some things…</h3>
       </div>
-      <div id="skills-donut"></div>
+      <div class="about__overview">
+        <p>I've been focused on the details of HTML5, CSS3, Javascript, and jQuery, while keeping an eye on the most–common modern frameworks.</p>
+        <p>I've also worked with Python, GIS, Java, and R in previous positions and/or for school projects.</p>
+      </div>
     </div>
 
     </section>
 
     <section id="talk">
-      <h2>Talk to Me</h2>
-      <div class="about">
-        <a class="linkedin" href="https://www.linkedin.com/in/wyatt-morris-98388242"><img src="assets/images/In-Black-34px-R.png" alt="LinkedIn Icon" height="32"/></a>
-        <a class="github" href="https://github.com/wyatt-morris"><img src="assets/images/GitHub-Mark-32px.png" alt="Github Mark Icon" /></a>
-      </div>
 
+      <h2>Talk to Me</h2>
+      <div class="social flex-container" role="contentinfo">
+        <div class="social__col--1 flex-container">
+          <a href="mailto:wyatt@wyatt-morris.com">wyatt@wyatt-morris.com</a>
+        </div>
+        <div class="social__block flex-container">
+          <div class="social__col--2 flex-container">
+            <a href="https://github.com/wyatt-morris">GitHub</a>
+            <a href="https://www.linkedin.com/in/wyatt-morris-98388242">LinkedIn</a>
+          </div>
+          <div class="social__col--3 flex-container">
+            <a href="http://codepen.io/wyattmorris/">CodePen</a>
+            <a href="https://dribbble.com/wyattmorris">Dribbble</a>
+          </div>
+        </div>
+
+      </div>
     </section>
 
   </div>
 
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Vollkorn|Oswald:400,700" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script async src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script async src="assets/script/script.js"></script>
 </body>
 </html>
