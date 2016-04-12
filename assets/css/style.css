@@ -277,6 +277,11 @@ a:focus, a:active {color: #cc3700;}
   max-width: 80vw;
 }
 
+.image-deets {
+  color: #373b3e;
+  font-size: 0.8em;
+}
+
 /*About Me styling*/
 .about {
   -webkit-flex-flow: column nowrap;
