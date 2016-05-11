@@ -78,7 +78,6 @@ html {
 }
 
 body {
-  /*background color #f8f8f8 inlined for rendering speed*/
   color: #373b3e;
   font-family: "Vollkorn", serif;
   font-kerning: normal;
@@ -117,12 +116,16 @@ section {
           align-items: flex-start;
 }
 
+section:not(#what) {
+  padding: 0 2em;
+}
+
 
 /* =========================================
 3.0 #typography
 ============================================ */
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .btn {
   color: #242424;
   font-family: "Oswald", sans-serif;
 }
@@ -166,9 +169,50 @@ a {
 }
 
 a:link, a:visited {color: #085083;}
-a:hover {color: #242424;}
-a:focus, a:active {color: #cc3700;}
+a:hover,
+a:focus,
+li span:hover,
+li span:focus  {
+  background-image: linear-gradient(to bottom, #cc3700 50%,#cc3700 100%);
+  background-size: 2px 2px;
+  background-repeat: repeat-x;
+  background-position: 0 90%;
+  color: #cc3700;
+}
+a:active {color: #242424;}
 
+p a:link,
+p a:visited {
+  color: #cc3700;
+}
+
+.btn {
+  height: 2em;
+  width: 9em;
+  background-color: inherit;
+  border-radius: 1em;
+  border: 2px solid;
+  display: block;
+  font-size: 2rem;
+  line-height: 1.7em;
+  margin: 0 auto;
+}
+
+.btn:hover,
+.btn:focus {
+  background-image: none;
+  color: #fff;
+}
+
+.btn__blue {
+  border-color: #085083;
+  color: #085083;
+}
+
+.btn__blue:hover,
+.btn__blue:focus {
+  background-color: #085083;
+}
 
 /* =========================================
 5.0 #header
@@ -176,12 +220,11 @@ a:focus, a:active {color: #cc3700;}
 
 /*Fixed nav with flex order 1*/
 .primary-nav {
-  background: rgba(248,248,248,0.4);
   padding: 1em 2em;
   text-transform: uppercase;
-  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.15);
-     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.15);
-          box-shadow: 0 0 5px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.35);
+     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.35);
+          box-shadow: 0 0 5px rgba(0,0,0,0.35);
 }
 
 .primary-nav__menu {
@@ -200,35 +243,13 @@ a:focus, a:active {color: #cc3700;}
 
 .primary-nav__menu li {
   font-weight: 700;
-  padding: 0 16px;
-  position: relative;
-  -webkit-transition: 0.3s;
-          transition: 0.3s;
-}
-
-.primary-nav__menu li:before {
-  background-color: #cc3700;
-  bottom: 0;
-  content: "";
-  height: .125em;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all 0.35s ease-in-out 0s;
-          transition: all 0.35s ease-in-out 0s;
-}
-
-.primary-nav__menu li:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  padding: 0 0.67em;
+  text-align: center;
 }
 
 .primary-nav__logo {
   font-size: 2.25em;
+  text-align: center;
 }
 
 /*Show initials on smaller screens*/
@@ -236,19 +257,18 @@ a:focus, a:active {color: #cc3700;}
   display: none;
 }
 
+.primary-nav__logo:hover, 
+.primary-nav__logo:focus {
+  background-image: none;
+}
+
 
 /* =========================================
 6.0 #content
 ============================================ */
 
-/*Order for fixed-nav*/
-.main {
-  padding: 0 2em;
-  width: 100%;
-}
-
 .hero {
-  padding: 1.4em 0;
+  padding: 2em;
 }
 
 .hero h1,
@@ -262,6 +282,14 @@ a:focus, a:active {color: #cc3700;}
 
 /*Project styling*/
 
+#what h2 {
+  padding: 3vh 0.889em;
+}
+
+article:nth-of-type(2n+1){
+  background-color: #e0e4e7;
+}
+
 .project {
   -webkit-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -269,12 +297,17 @@ a:focus, a:active {color: #cc3700;}
           justify-content: space-around;
 }
 
-.project__container {
-  padding: 1em 0.5em;
+.project__container,
+.project__img {
+  width: 100%;
 }
 
-.project__img {
-  max-width: 80vw;
+.project__container {
+  padding: 2em;
+}
+
+.project__text {
+  text-align: center;
 }
 
 .image-deets {
@@ -290,16 +323,18 @@ a:focus, a:active {color: #cc3700;}
           align-items: flex-start;
 }
 
-p a:link,
-p a:visited {
+p + a:link {
   color: #cc3700;
-  text-decoration: underline;
 }
 
 
 /* =========================================
 7.0 #footer
 ============================================ */
+
+#talk {
+  background-color: #e0e4e7;
+}
 
 .social {
   font-family: "Oswald";
@@ -320,11 +355,6 @@ p a:visited {
   padding: .5em 0;
 }
 
-.social a:hover,
-.social a:focus {
-  color: #cc3700;
-}
-
 
 /* =========================================
 8.0 #responsive
@@ -342,6 +372,10 @@ p a:visited {
   .primary-nav__logo {
     -webkit-flex: 1 0 0%;
             flex: 1 0 0%;
+  }
+
+  .primary-nav__logo {
+    text-align: left;
   }
 }
 
@@ -364,63 +398,30 @@ p a:visited {
     -webkit-align-items: baseline;
             align-items: baseline;
   }
+
   .project__container {
-    max-width: inherit;
+    width: 100%;
     display: -webkit-flex;
     display:         flex;
     -webkit-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    -webkit-align-items: center;
-            align-items: center;
-  }
-  .project__img {
-    max-width: 55vw;
-  }
-  .project__text {
-    padding-left: 2em;
-  }
-}
-
-
-/*3rd breakpoint*/
-@media screen and (min-width: 50em) {
-  .primary-nav__menu {
-    -webkit-flex: 3 0 0%;
-            flex: 3 0 0%;
     -webkit-justify-content: space-between;
             justify-content: space-between;
   }
 
-  .primary-nav__menu li {
-    padding: 0;
+  .project__img {
+    max-width: 55vw;
   }
 
-  /*Navigation - show full links on larger screens*/
-  .primary-nav__menu span:first-of-type {
-    display: none;
-  }
-
-  .primary-nav__menu span:last-of-type {
+  .project__text {
     display: -webkit-flex;
     display:         flex;
-  }
-
-  .primary-nav__menu a {
-    padding: 0;
-  }
-
-  .primary-nav__logo {
-    -webkit-flex: 2 0 0%;
-            flex: 2 0 0%;
-  }
-
-  /*Hero text mod for larger screens*/
-  .hero h1 {
-  font-size:  5.063em;
-  }
-
-  .hero h2 {
-    font-size:  2.25em;
+    -webkit-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+            justify-content: space-around;
   }
 
   /*About me and footer styling changes*/
@@ -455,6 +456,49 @@ p a:visited {
 }
 
 
+/*3rd breakpoint ~800px*/
+@media screen and (min-width: 50em) {
+  .primary-nav__menu {
+    -webkit-flex: 3 0 0%;
+            flex: 3 0 0%;
+    -webkit-justify-content: space-around;
+            justify-content: space-around;
+  }
+
+  .primary-nav__menu li {
+    padding: 0;
+  }
+
+  /*Navigation - show full links on larger screens*/
+  .primary-nav__menu span:first-of-type {
+    display: none;
+  }
+
+  .primary-nav__menu span:last-of-type {
+    display: -webkit-flex;
+    display:         flex;
+  }
+
+  .primary-nav__logo {
+    -webkit-flex: 2 0 0%;
+            flex: 2 0 0%;
+  }
+
+  /*Hero text mod for larger screens*/
+  .hero h1 {
+  font-size:  5.063em;
+  }
+
+  .hero h2 {
+    font-size:  2.25em;
+  }
+
+  .project__container {
+    -webkit-justify-content: space-around;
+            justify-content: space-around;
+  }
+}
+
 /*4th breakpoint*/
 @media screen and (min-width: 60em) {
   /*Navigation mods*/
@@ -482,5 +526,9 @@ p a:visited {
   .primary-nav__logo {
     -webkit-flex: 1.3 0 0%;
             flex: 1.3 0 0%;
+  }
+
+  .main {
+    width: 100%;
   }
 }
