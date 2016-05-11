@@ -8,15 +8,10 @@
   <meta name="author" content="Wyatt Morris">
   <meta name="viewport" content="width=device-width,
   initial-scale=1">
-  <style media="screen">
-  body {
-    background: #f8f8f8;
-  }
-  </style>
   <link rel="icon" type="image/ico" href="http://wyatt-morris.com/favicon.ico">
 </head>
 
-<body class="flex-container" id="#home">
+<body class="flex-container" id="home">
 
   <nav class="flex-container primary-nav">
     <a href="#home" class="primary-nav__logo">
@@ -24,7 +19,7 @@
       <span>Wyatt Morris</span>
     </a>
     <ul class="flex-container primary-nav__menu">
-      <li><a class="active" href="#what">
+      <li><a href="#what">
         <span>What</span>
         <span>What I Do</span>
       </a></li>
@@ -41,7 +36,7 @@
 
   <div class="main" role="main">
 
-    <div class="hero flex-container" id="home">
+    <div class="hero flex-container">
       <div class="hero__text">
         <h2>Builder by Trade</h2>
         <h1>Developer by Choice</h1>
@@ -51,6 +46,19 @@
     <section id="what">
       <h2>What I Do</h2>
       <div class="project flex-container">
+</h2>        <article class="project__container">
+          <figure>
+            <img class="project__img"
+              src="assets/images/portfolio-images.png"
+              alt="Preview of project on various devices" />
+          </figure>
+          <div class="project__text">
+            <h3 class="project__text--title">Portfolio-ception</h3>
+            <p class="project__text--skills"> Skills — CSS3 • HTML5 <br> Flexbox • Responsive Design</p>
+            <a href="#" class="btn btn__blue btn__blue--active">Hey-O!</a>
+          </div>
+        </article>
+
         <article class="project__container">
           <figure>
             <img class="project__img"
@@ -65,9 +73,7 @@
             <h3 class="project__text--title">Coming Soon</h3>
             <p class="project__text--skills"> Skills — stuff • things</p>
             <p class="image-deets">Placeholder image by
-              <a href="https://unsplash.com/photos/vS7LVkPyXJU">Philip Swinburn</a>
-
-            </p>
+              <a href="https://unsplash.com/photos/vS7LVkPyXJU">Philip Swinburn</a></p>
           </div>
         </article>
 
@@ -84,6 +90,8 @@
           <div class="project__text">
             <h3 class="project__text--title">Coming Soon</h3>
             <p class="project__text--skills"> Skills — stuff • things</p>
+             <p class="image-deets">Placeholder image by
+              <a href="https://unsplash.com/photos/vS7LVkPyXJU">Philip Swinburn</a></p>
           </div>
         </article>
 
@@ -100,22 +108,8 @@
           <div class="project__text">
             <h3 class="project__text--title">Coming Soon</h3>
             <p class="project__text--skills"> Skills — stuff • things</p>
-          </div>
-        </article>
-
-        <article class="project__container">
-          <figure>
-            <img class="project__img"
-              src="assets/images/workshop_320.png"
-              srcset="assets/images/workshop_1280.png 1280w,
-                      assets/images/workshop_640.png 640w,
-                      assets/images/workshop_320.png 320w"
-              sizes="(min-width: 42em) 55vw, 80vw"
-              alt="Placeholder Image" />
-          </figure>
-          <div class="project__text">
-            <h3 class="project__text--title">Coming Soon</h3>
-            <p class="project__text--skills"> Skills — stuff • things</p>
+             <p class="image-deets">Placeholder image by
+              <a href="https://unsplash.com/photos/vS7LVkPyXJU">Philip Swinburn</a></p>
           </div>
         </article>
       </div>
@@ -138,7 +132,7 @@
         <h3>I've learned some things…</h3>
       </div>
       <div class="about__overview">
-        <p>I've been focused on the details of HTML5, CSS3, Javascript, and jQuery, while keeping an eye on the most–common modern frameworks.</p>
+        <p>I've been focused on the details of HTML5, CSS3, JavaScript, and jQuery, while keeping an eye on the most–common modern frameworks.</p>
         <p>I've also worked with Python, GIS, Java, and R in previous positions and/or for school projects.</p>
       </div>
     </div>
@@ -148,7 +142,7 @@
     <section id="talk">
 
       <h2>Talk to Me</h2>
-      <div class="social flex-container" role="contentinfo">
+      <footer class="social flex-container">
         <div class="social__col--1 flex-container">
           <a href="mailto:wyatt@wyatt-morris.com">wyatt@wyatt-morris.com</a>
         </div>
@@ -163,7 +157,7 @@
           </div>
         </div>
 
-      </div>
+      </footer>
     </section>
 
   </div>
